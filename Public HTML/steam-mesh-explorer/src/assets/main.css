@@ -1,0 +1,100 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --c-black: #323232;
+  --c-white: #f0f1f2;
+  --c-gray: #636366;
+  --c-dark-blue: #1b2838;
+  --c-blue: #66c0f4;
+}
+
+/* =========================================================
+   ESTILOS GLOBALES
+========================================================= */
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  font-family: "Fira Code", monospace;
+  font-size: 22px;
+  color: var(--c-white);
+
+  background: radial-gradient(circle at center, #3c597d 0%, #1b2838 100%);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    #000000 0%,
+    #00000045 100%
+  );
+
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =========================================================
+   COMPONENTES
+========================================================= */
+
+.search-bar {
+  width: 576px;
+  height: 46px;
+
+  padding: 0 16px;
+
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  background: var(--c-white);
+  opacity: 0.85;
+
+  color: var(--c-dark-blue);
+
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: left;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-bar:focus {
+  border-color: var(--c-blue);
+}
+
+
+
+.steam-logo {
+  width: 400px;
+  height: 400px;
+  color: var(--c-dark-blue);
+}
